@@ -1,0 +1,58 @@
+﻿@model DataAccess.Models.User
+
+ 
+@{
+    Layout = null;
+}
+ 
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Index</title>
+</head>
+<h2>Страница регистрации</h2>
+<body>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <table>
+            <tr>
+                <td>Фамилия:</td>
+                <td>@Html.TextBoxFor(m => m.Surname)</td>
+            </tr>
+            <tr>
+                <td>Имя:</td>
+                <td>@Html.TextBoxFor(m => m.Name)</td>
+            </tr>
+            <tr>
+                <td>Отчество:</td>
+                <td>@Html.TextBoxFor(m => m.Secondname)</td>
+            </tr>
+            <tr>
+                <td>e-mail:</td>
+                <td>@Html.TextBoxFor(m => m.Email)</td>
+            </tr>
+            <tr>
+                <td>Телефон:</td>
+                <td>@Html.TextBoxFor(m => m.Phone)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Отправить заявку на регистрацию" /></td>
+                
+            </tr>
+
+        </table>
+    }
+</body>
+</html>
+
+
+
+
+
+
+
+
+
